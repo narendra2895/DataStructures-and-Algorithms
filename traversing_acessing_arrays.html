@@ -18,20 +18,26 @@
 
         function getElement()
         {
+            
             let el = document.getElementById(`element`).value
-            if (0<el<data.length){
-            alert(`Array element value is ${data[el]}`)
+            if (el<data.length && el>0 && typeof parseInt(el) ==="number"){
+                alert(`Array element value is ${data[el]}`)
             }
-  
+            else if(el<0 && typeof parseInt(el) ==="number"){
+                alert(`Do not enter negative values`)
+            }
             else{
                 alert("Invalid input")
             }
+            console.log(el)
         }
         
     </script>
 </head>
 <body>
-    <input type="number"  id="element" />
+    <input type="text"  id="element"  />
     <button onclick="getElement()">Get Element</button>
 </body>
 </html>
+
+
