@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching array Element</title>
+    <script>
+    const data = [46, 61, 15, 58, 49, 28,33,22,11,23,3432,453,54,99,87,44];
+    console.warn(data)
+    function searchEl(){
+        let position= document.getElementById('number').value;   
+        position= parseInt(position);
+        let index= undefined;    
+        for( let i= 0 ;i<data.length; i++){
+          if(data[i]===position){
+                index =i ; 
+                alert(`The number is present at index number ${index}`)             
+                break;
+            }
+        }
+        alert("enter a valid number")
+}
+</script>
+</head>
+
+<body>
+<input type="text" placeholder="Enter number" id="number">
+<button onclick="searchEl()"> Search</button>
+    
+</body>
+</html>
